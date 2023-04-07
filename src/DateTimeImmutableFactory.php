@@ -14,6 +14,6 @@ class DateTimeImmutableFactory
             return \DateTimeImmutable::createFromMutable($datetime);
         }
 
-        throw new \Exception('Unknown class ' . get_class($datetime));
+        throw new \Exception('Unknown class ' . get_class($datetime)); /** @phpstan-ignore-line */
     }
 }
