@@ -6,21 +6,21 @@ use PHPUnit\Framework\TestCase;
 
 class DateTimeImmutableFactoryTest extends TestCase
 {
-    public function testFromMutable(): void
+    public function testFromMutable() : void
     {
         $datetime = DateTimeImmutableFactory::create(new \DateTime());
 
         $this->assertInstanceOf(\DateTimeImmutable::class, $datetime);
     }
 
-    public function testFromImmutable(): void
+    public function testFromImmutable() : void
     {
         $datetime = DateTimeImmutableFactory::create(new \DateTimeImmutable());
 
         $this->assertInstanceOf(\DateTimeImmutable::class, $datetime);
     }
 
-    public function testModify(): void
+    public function testModify() : void
     {
         $datetime = $this->addOneDay(new \DateTime());
 
