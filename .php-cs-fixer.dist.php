@@ -1,11 +1,14 @@
 <?php
 
-$finder = \PhpCsFixer\Finder::create()
+use PhpCsFixer\Config;
+use PhpCsFixer\Finder;
+
+$finder = (new Finder())
     ->exclude('vendor')
     ->in(__DIR__)
 ;
 
-return \PhpCsFixer\Config::create()
+return (new Config())
     ->setRules([
         '@Symfony' => true,
         'concat_space' => false,
